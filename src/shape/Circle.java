@@ -1,10 +1,7 @@
 package shape;
 
-import java.awt.Color;
-
 import config.ShapeProConstant;
 import processing.core.PApplet;
-import processing.event.MouseEvent;
 
 public class Circle extends Shape {
 

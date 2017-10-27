@@ -1,5 +1,6 @@
 import config.ShapeProConstant;
 import processing.core.PApplet;
+import processing.event.KeyEvent;
 import processing.event.MouseEvent;
 import shape.Circle;
 import shape.Rect;
@@ -37,14 +38,16 @@ public class Program extends PApplet implements Serializable{
         Shape dragShape = null;
         for(int i=shapes.size()-1; i>=0; i--) {
             if (shapes.get(i).isCollected(event.getX(), event.getY())) {
-                dragShape = shapes.get(i);
+                dragShape = shapes.get(i).clone();
                 break;
             }
         }
 
-        if(dragShape!=null)
+        if(dragShape!=null) {
+            shapes.remove(dragShape);
+            shapes.add(dragShape);
             dragShape.setCentralPoint(event.getX(), event.getY());
-
+        }
     }
 
     @Override

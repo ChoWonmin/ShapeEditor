@@ -18,4 +18,23 @@ public class CentralPoint implements Serializable{
     public void setCentralY(int centralY) {
         this.centralY = centralY;
     }
+
+    public int getFloorX(int size){
+        return centralX - size;
+    }
+    public int getFloorY(int size){
+        return centralY - size;
+    }
+
+    public int getCeilX(int size){
+        return centralX + size;
+    }
+
+    public int getCeilY(int size){
+        return centralY + size;
+    }
+
+
+
+
 }

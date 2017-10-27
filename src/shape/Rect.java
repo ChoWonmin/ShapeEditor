@@ -24,10 +24,9 @@ public class Rect extends Shape{
         int centralX = centralPoint.getCentralX();
         int centralY = centralPoint.getCentralY();
 
-        if((centralX-size)<=mouseX && mouseX<=(centralX+size)
-                && (centralY-size)<=mouseY && mouseY<=(centralY+size))
+        if(centralPoint.getFloorX(size)<=mouseX && mouseX<=centralPoint.getCeilX(size)
+                && centralPoint.getFloorY(size)<=mouseY && mouseY<=centralPoint.getCeilY(size))
             collected = true;
-
 
         return collected;
     }

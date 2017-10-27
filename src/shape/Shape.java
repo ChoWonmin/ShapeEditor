@@ -2,8 +2,6 @@ package shape;
 
 import config.ShapeProConstant;
 import processing.core.PApplet;
-
-import java.awt.Color;
 import java.io.Serializable;
 
 public abstract class Shape implements Cloneable, Serializable{
